@@ -9,8 +9,8 @@ Technologies: Laravel - Vue - PHPUNIT
 
 - Components.
     - [x] Proper component fields .  
-    - [ ] Online editor .
-    - [ ] Realtime preview for changes.
+    - [x] Online editor .
+    - [x] Realtime preview for changes.
     - [ ] Copy/Download code buttons.
 - [ ] Build UI.
 - [ ] Rating.
