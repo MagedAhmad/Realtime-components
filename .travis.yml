@@ -1,0 +1,14 @@
+language: php
+
+php:
+  - 7.3
+  
+before_script:
+  - cp .env.example .env
+  - composer install --no-interaction
+  - php artisan key:generate
+
+cache:
+  directories:
+    - node_modules
+    - vendor
