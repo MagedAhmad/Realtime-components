@@ -24,4 +24,8 @@ class ComponentController extends Controller
 
         return $component;
     }
+
+    public function create() {
+        return view('components.create');
+    }
 }
