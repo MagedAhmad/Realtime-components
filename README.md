@@ -2,13 +2,13 @@
 
 A service to share code snippets and components
 
-Technologies: Laravel - Vue
+Technologies: Laravel - Vue - PHPUNIT
 
 ### ROAD MAP
 
 - [ ] Build UI.
-- Posts.
-    - [ ] Proper post fields .  
+- Components.
+    - [x] Proper component fields .  
     - [ ] Online editor .
     - [ ] Realtime preview for changes.
     - [ ] Copy/Download code buttons.
