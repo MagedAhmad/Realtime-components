@@ -5,6 +5,15 @@ A service to share code snippets and components
 
 Technologies: Laravel - Vue - PHPUNIT
 
+### INSTALLATION
+```
+composer install
+cp .env.example .env
+npm install
+php artisan migrate
+```
+
+
 ### ROAD MAP
 
 - Components.
@@ -15,7 +24,7 @@ Technologies: Laravel - Vue - PHPUNIT
     - [ ] Retrieve/Edit Components.
     - [ ] Copy/Download code buttons.
 - [ ] Build UI.
-- [ ] Rating.
+- [x] Rating.
 - [ ] Subscribe to certain user.
 - [ ] Notifications system.
 

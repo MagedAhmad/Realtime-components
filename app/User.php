@@ -40,4 +40,14 @@ class User extends Authenticatable
     public function components() {
         return $this->hasMany(Component::class);
     }
+
+    public function createRating($data) {
+        $record = Rating::create([
+            'user_id' => auth()->id(),
+            'component_id' => $data['component_id'],
+            'points' => $data['points']
+        ]);
+
+        return $record;
+    }
 }
