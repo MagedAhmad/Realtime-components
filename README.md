@@ -3,7 +3,12 @@
 
 A service to share code snippets and components
 
-Technologies: Laravel - Vue - PHPUNIT
+### ABOUT 
+
+Project is originally built for learning porpuses. it's like <a target="_blank" href="https://codepen.io/">codepen</a>. Used <a target="_blank" href="https://codemirror.net/">CodeMirror</a> to ship the online text editor.
+
+Technologies: Laravel, Vue.
+
 
 ### INSTALLATION
 ```
@@ -16,17 +21,21 @@ php artisan migrate
 
 ### ROAD MAP
 
-- Components.
+- Components:
     - [x] Proper component fields .  
     - [x] Online editor .
     - [x] Realtime preview for changes.
     - [x] Store Components.
     - [ ] Retrieve/Edit Components.
     - [ ] Copy/Download code buttons.
-- [ ] Build UI.
+    - [ ] Private components.
+- [ ] Build UI (Using tailwindcss).
 - [x] Rating.
 - [ ] Subscribe to certain user.
 - [ ] Notifications system.
+- Admin-panel
+    - [ ] Multi authentication.
+    - [ ] General statistics & graphs.
 
 More features to come ... 
 
@@ -38,3 +47,7 @@ If you want to contribute <b>make sure</b> that
 - Cover your code with unit tests.
 - Open new Issue describing the bug/new-feature .
 - Push a pull request to solve the issue.
+
+
+### License 
+It's an open source project licensed under <a href="https://opensource.org/licenses/MIT">MIT license</a>.
