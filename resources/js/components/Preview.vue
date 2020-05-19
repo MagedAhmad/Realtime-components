@@ -11,6 +11,7 @@
     import editor from './Editor.vue';
     export default {
         components: { editor },
+
         data() {
             return {
                 iframe : ''
@@ -24,6 +25,7 @@
             showChanges(comming) {
                 var html = comming;
                 this.iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
+                this.$emit('finalData', html);
             }
         }
     }

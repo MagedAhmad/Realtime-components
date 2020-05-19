@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Component;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ComponentController extends Controller
 {
@@ -20,6 +21,7 @@ class ComponentController extends Controller
             'name' => 'required',
             'body' => 'required'
         ]);
+        $request['slug'] = Str::slug($request->name, '-');
         $component = auth()->user()->components()->create($request->all());
 
         return $component;
