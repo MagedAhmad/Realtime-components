@@ -27,6 +27,7 @@ window.codemirror = require('codemirror');
 Vue.component('editor', require('./components/Editor.vue').default);
 Vue.component('preview', require('./components/Preview.vue').default);
 Vue.component('create-component', require('./components/Create-component.vue').default);
+Vue.component('update-component', require('./components/Update-component.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

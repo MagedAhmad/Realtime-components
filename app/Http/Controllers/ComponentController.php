@@ -30,4 +30,20 @@ class ComponentController extends Controller
     public function create() {
         return view('components.create');
     }
+
+    public function edit(Component $component) {
+        return view('components.edit', compact('component'));
+    }
+
+    public function update(Component $component, Request $request) {
+        $this->authorize('update', $component);
+
+        $component->update(request()->validate([
+            'name' => 'required',
+            'body' => 'required',
+            'description' => 'nullable'
+        ]));
+
+        return $component;
+    }
 }

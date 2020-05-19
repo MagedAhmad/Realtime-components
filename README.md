@@ -26,7 +26,7 @@ php artisan migrate
     - [x] Online editor .
     - [x] Realtime preview for changes.
     - [x] Store Components.
-    - [ ] Retrieve/Edit Components.
+    - [x] Retrieve/Edit Components.
     - [ ] Copy/Download code buttons.
     - [ ] Private components.
 - [ ] Build UI (Using tailwindcss).

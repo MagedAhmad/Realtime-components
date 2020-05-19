@@ -2,7 +2,7 @@
 
 @section('content')
 {{ $component->name }}
-
-<editor body="{{ $component->body }}"></editor>
-<preview></preview>
+{{ $component->description }}
+<a href="{{url('/component/'. $component->slug . '/edit')}}">Edit</a>
+<preview body="{{ $component->body }}"></preview>
 @endsection

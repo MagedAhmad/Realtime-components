@@ -26,4 +26,8 @@ class Component extends Model
     
         return $rating->points;
     }
+
+    public function path() {
+        return '/component/' . $this->slug;
+    }
 }
