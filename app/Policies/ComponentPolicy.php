@@ -53,7 +53,7 @@ class ComponentPolicy
      */
     public function update(User $user, Component $component)
     {
-        return $user->id === $component->user_id;
+        return $user->id == $component->user_id;
     }
 
     /**

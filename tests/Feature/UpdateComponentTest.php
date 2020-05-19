@@ -11,8 +11,11 @@ class UpdateComponentTest extends TestCase
     use RefreshDatabase;
 
     public function test_unauthorized_users_cannot_update_component() {
-        $component = factory(Component::class)->create();
+        $this->withExceptionHandling();
         $this->signIn();
+
+        $component = factory(Component::class)->create(['user_id' => factory('App\User')->create()->id]);
+        
         $response = $this->patch($component->path(),[])
             ->assertStatus(403);
     }
