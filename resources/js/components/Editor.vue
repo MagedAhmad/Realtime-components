@@ -1,12 +1,15 @@
 <template>
     <div>
-        <div class="code" v-on:keyup="changed">
-            
-        </div>
+        <div class="code" v-on:keyup="changed"></div>
     </div>
 </template>
 <script>
+    import { EventBus } from '../event-bus.js';
+
     export default {
+        props: [
+            'body'
+        ],
         data() {
             return {
                data: '',
@@ -15,7 +18,7 @@
         },
         mounted() {
             this.editor = codemirror(document.getElementsByClassName('code')[0], {
-                value: "",
+                value: this.body ? this.body : '',
                 lineNumbers: true,
                 matchBrackets: true,
                 mode: "html",
@@ -25,7 +28,7 @@
          methods: {
             changed() {
                 this.data = this.editor.getValue();
-                this.$emit('changed', this.data);
+                EventBus.$emit('changed', this.data);
             }
         }
     }

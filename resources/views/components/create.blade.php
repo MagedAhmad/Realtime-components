@@ -6,5 +6,6 @@
 
 @section('content')
     <create-component></create-component>
-@endsection
 
+    <preview></preview>
+@endsection

@@ -1,17 +1,13 @@
 <template>
     <div>
-        
-        <editor @changed="showChanges"></editor>
         <iframe>
-            
         </iframe>
     </div>
 </template>
 <script>
-    import editor from './Editor.vue';
-    export default {
-        components: { editor },
+    import { EventBus } from '../event-bus.js';
 
+    export default {
         data() {
             return {
                 iframe : ''
@@ -21,12 +17,10 @@
             console.log('Component mounted.')
             this.iframe = document.querySelector("iframe")
         },
-        methods: {
-            showChanges(comming) {
-                var html = comming;
-                this.iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
-                this.$emit('finalData', html);
-            }
-        }
+        created() {
+            EventBus.$on('changed', (data) => {
+                this.iframe.src = "data:text/html;charset=utf-8," + encodeURI(data);
+            })
+        },
     }
 </script>

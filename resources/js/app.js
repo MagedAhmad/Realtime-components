@@ -12,6 +12,7 @@ import './bootstrap';
 window.Vue = require('vue');
 window.codemirror = require('codemirror');
 
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -26,7 +27,6 @@ window.codemirror = require('codemirror');
 Vue.component('editor', require('./components/Editor.vue').default);
 Vue.component('preview', require('./components/Preview.vue').default);
 Vue.component('create-component', require('./components/Create-component.vue').default);
-Vue.component('show-component', require('./components/Show-component.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
