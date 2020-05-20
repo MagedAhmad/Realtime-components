@@ -46,4 +46,12 @@ class ComponentController extends Controller
 
         return $component;
     }
+
+    public function download($slug) {
+        $component = Component::where('slug', $slug)->first();
+        $filename = $slug . ".html";
+        header("Content-type: text/plain");
+        header("Content-Disposition: attachment; filename=" . $filename);
+        echo $component->body;
+    }
 }

@@ -27,12 +27,15 @@ php artisan migrate
     - [x] Realtime preview for changes.
     - [x] Store Components.
     - [x] Retrieve/Edit Components.
-    - [ ] Copy/Download code buttons.
+    - [x] Copy/Download code buttons.
     - [ ] Private components.
 - [ ] Build UI (Using tailwindcss).
 - [x] Rating.
 - [ ] Subscribe to certain user.
 - [ ] Notifications system.
+- [ ] Comments with disqus.
+- [ ] Authentication google/github.
+- [ ] Ad area & Payment with stripe.
 - Admin-panel
     - [ ] Multi authentication.
     - [ ] General statistics & graphs.

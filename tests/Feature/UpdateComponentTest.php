@@ -36,7 +36,6 @@ class UpdateComponentTest extends TestCase
     public function test_component_can_be_updated() {
         $this->signIn();
         $component = factory(Component::class)->create(['user_id' => auth()->id()]);
-
         $response = $this->patch($component->path(),[
             'name' => 'something',
             'body' => 'a body'

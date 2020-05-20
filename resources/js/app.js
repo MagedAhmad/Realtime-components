@@ -12,6 +12,9 @@ import './bootstrap';
 window.Vue = require('vue');
 window.codemirror = require('codemirror');
 
+import VueClipboard from 'vue-clipboard2'
+
+Vue.use(VueClipboard)
 
 /**
  * The following block of code may be used to automatically register your
@@ -28,6 +31,7 @@ Vue.component('editor', require('./components/Editor.vue').default);
 Vue.component('preview', require('./components/Preview.vue').default);
 Vue.component('create-component', require('./components/Create-component.vue').default);
 Vue.component('update-component', require('./components/Update-component.vue').default);
+Vue.component('copy-button', require('./components/Copy-button.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
