@@ -34,7 +34,7 @@ php artisan migrate
 - [ ] Subscribe to certain user.
 - [ ] Notifications system.
 - [ ] Comments with disqus.
-- [ ] Authentication google/github.
+- [ ] Authentication with google/github.
 - [ ] Ad area & Payment with stripe.
 - Admin-panel
     - [ ] Multi authentication.
