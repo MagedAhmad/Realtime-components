@@ -28,9 +28,10 @@ php artisan migrate
     - [x] Store Components.
     - [x] Retrieve/Edit Components.
     - [x] Copy/Download code buttons.
-    - [ ] Private components.
+    - [x] Private components.
 - [ ] Build UI (Using tailwindcss).
 - [x] Rating.
+- [ ] Users Profile.
 - [ ] Subscribe to certain user.
 - [ ] Notifications system.
 - [ ] Comments with disqus.

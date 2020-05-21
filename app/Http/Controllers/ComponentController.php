@@ -12,8 +12,18 @@ class ComponentController extends Controller
         return $this->middleware('auth')->Except(['show', 'index']);    
     }
 
+
+    public function index() {
+        $components = Component::where('private', 0)->get();
+        return $components;    
+    }
+
     public function show(Component $component) {
         return view('components.show', compact('component'));
+    }
+
+    public function create() {
+        return view('components.create');
     }
 
     public function store(Request $request) {
@@ -25,10 +35,6 @@ class ComponentController extends Controller
         $component = auth()->user()->components()->create($request->all());
 
         return $component;
-    }
-
-    public function create() {
-        return view('components.create');
     }
 
     public function edit(Component $component) {
