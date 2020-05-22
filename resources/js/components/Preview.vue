@@ -1,6 +1,6 @@
 <template>
     <div>
-        <iframe sandbox id="id">
+        <iframe sandbox :id="id">
         </iframe>
     </div>
 </template>
@@ -18,8 +18,7 @@
             }
         },
         mounted() {
-            console.log('Component mounted.')
-            this.iframe = document.getElementById("id")
+            this.iframe = document.getElementById(this.id)
             if(this.body != '')
                 this.iframe.src = "data:text/html;charset=utf-8," + encodeURI(this.body)
             if(this.body == undefined) 
