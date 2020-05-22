@@ -6,9 +6,8 @@
     <title>Realtime Components</title>
     <link rel="stylesheet" href="{{url('/css/app.css') }}">
     <link rel="stylesheet" href="{{url('/css/dracula.css')}}">
-
+    
     @yield('styles')
 
 </head>
 <body>
-    

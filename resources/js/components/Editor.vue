@@ -21,7 +21,8 @@
                 value: this.body ? this.body : '',
                 lineNumbers: true,
                 matchBrackets: true,
-                mode: "html",
+                mode: "xml",
+                htmlMode: true,
                 theme: "dracula",
             });
         },

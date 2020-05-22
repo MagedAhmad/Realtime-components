@@ -21,7 +21,7 @@ php artisan migrate
 
 ### ROAD MAP
 
-- Components:
+- [x] Components:
     - [x] Proper component fields .  
     - [x] Online editor .
     - [x] Realtime preview for changes.
@@ -31,7 +31,10 @@ php artisan migrate
     - [x] Private components.
 - [ ] Build UI (Using tailwindcss).
 - [x] Rating.
-- [ ] Users Profile.
+- [ ] Users Profile. `(Working on)`
+    - [ ] show profile .
+    - [ ] Edit profile .
+    - [ ] Deactivate user .
 - [ ] Subscribe to certain user.
 - [ ] Notifications system.
 - [ ] Comments with disqus.
