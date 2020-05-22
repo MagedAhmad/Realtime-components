@@ -19,11 +19,13 @@
         mounted() {
             this.editor = codemirror(document.getElementsByClassName('code')[0], {
                 value: this.body ? this.body : '',
-                lineNumbers: true,
                 matchBrackets: true,
-                mode: "xml",
-                htmlMode: true,
                 theme: "dracula",
+                origLeft: null,
+                mode: 'htmlmixed',
+                lineNumbers: true,
+                collapseIdentical: false,
+                highlightDifferences: true
             });
         },
          methods: {
