@@ -1,6 +1,6 @@
 <template>
     <div>
-        <iframe sandbox>
+        <iframe sandbox id="id">
         </iframe>
     </div>
 </template>
@@ -14,17 +14,16 @@
         data() {
             return {
                 iframe : '',
+                id : this.uid
             }
         },
         mounted() {
             console.log('Component mounted.')
-            this.iframe = document.querySelector("iframe")
-            
+            this.iframe = document.getElementById("id")
             if(this.body != '')
                 this.iframe.src = "data:text/html;charset=utf-8," + encodeURI(this.body)
             if(this.body == undefined) 
                 this.iframe.src = "data:text/html;charset=utf-8," + encodeURI(' ')
-
         },
         created() {
             EventBus.$on('changed', (data) => {

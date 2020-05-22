@@ -19,6 +19,9 @@ import "codemirror/mode/htmlmixed/htmlmixed.js"
 
 
 import VueClipboard from 'vue-clipboard2'
+import UniqueId from 'vue-unique-id';
+ 
+Vue.use(UniqueId);
 
 Vue.use(VueClipboard)
 
@@ -38,6 +41,7 @@ Vue.component('preview', require('./components/Preview.vue').default);
 Vue.component('create-component', require('./components/Create-component.vue').default);
 Vue.component('update-component', require('./components/Update-component.vue').default);
 Vue.component('copy-button', require('./components/Copy-button.vue').default);
+Vue.component('show-components', require('./components/Show-components.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -32,7 +32,7 @@ php artisan migrate
 - [ ] Build UI (Using tailwindcss).
 - [x] Rating.
 - [ ] Users Profile. `(Working on)`
-    - [ ] show profile .
+    - [x] show profile .
     - [ ] Edit profile .
     - [ ] Deactivate user .
 - [ ] Subscribe to certain user.
