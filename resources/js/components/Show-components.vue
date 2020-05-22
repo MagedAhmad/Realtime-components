@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-for="component in data" :key="component.id">
-                {{ component.body }}
+                {{ component.name }}
                 <preview :body="component.body"></preview>
 		</div>
     </div>
