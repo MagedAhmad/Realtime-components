@@ -12,6 +12,12 @@ import './bootstrap';
 window.Vue = require('vue');
 window.codemirror = require('codemirror');
 
+import "codemirror/mode/htmlmixed/htmlmixed.js"
+// import 'codemirror/mode/xml/xml.js'
+// import 'codemirror/mode/javascript/javascript.js'
+// import 'codemirror/mode/css/css.js'
+
+
 import VueClipboard from 'vue-clipboard2'
 
 Vue.use(VueClipboard)
