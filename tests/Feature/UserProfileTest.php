@@ -27,4 +27,29 @@ class UserProfileTest extends TestCase
         $this->get('/profile/'. auth()->id())
             ->assertSee($component->name);
     }
+
+    public function test_user_can_update_his_own_profile() 
+    {
+        $this->withoutExceptionHandling();
+        $user = factory('App\User')->create(['name' => 'maged']);
+        $this->signIn($user);
+        $this->patch('/profile/'. $user->id , [
+            'name' => 'Doe',
+            'email' => 'doe@doe.com'
+        ]);
+
+        $this->assertEquals('Doe', $user->fresh()->name);
+    }
+
+    public function test_unauthorized_users_cannot_update_profile() 
+    {
+        $user1 = factory('App\User')->create();
+        $user2 = factory('App\User')->create();
+        $this->signIn($user1);
+
+        $this->patch('/profile/'. $user2->id , [
+            'name' => 'Doe',
+            'email' => 'doe@doe.com'
+        ])->assertStatus(403);
+    }
 }
