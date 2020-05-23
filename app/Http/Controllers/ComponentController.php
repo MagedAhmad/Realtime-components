@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Component;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use App\Http\Resources\ComponentResource;
 
 class ComponentController extends Controller
 {
@@ -14,8 +15,7 @@ class ComponentController extends Controller
 
 
     public function index() {
-        $components = Component::where('private', 0)->get();
-        return $components;    
+        return ComponentResource::collection(Component::where('private', 0)->get());
     }
 
     public function show(Component $component) {
