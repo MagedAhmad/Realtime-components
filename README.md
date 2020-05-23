@@ -33,7 +33,7 @@ php artisan migrate
 - [x] Rating.
 - [ ] Users Profile. `(Working on)`
     - [x] show profile .
-    - [ ] Edit profile .
+    - [x] Edit profile .
     - [ ] Deactivate user .
 - [ ] Subscribe to certain user.
 - [ ] Notifications system.
