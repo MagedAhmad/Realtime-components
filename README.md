@@ -37,7 +37,7 @@ php artisan migrate
     - [ ] Deactivate user .
 - [ ] Subscribe to certain user.
 - [ ] Notifications system.
-- [ ] Comments with disqus.
+- [x] Comments with disqus.
 - [ ] Authentication with google/github.
 - [ ] Ad area & Payment with stripe.
 - Admin-panel
