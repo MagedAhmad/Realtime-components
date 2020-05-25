@@ -1,0 +1,28 @@
+.logo {
+    font-family: 'Lobster', cursive;
+}
+
+.grid-column {
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr)) !important;
+}
+
+
+/* stars */
+
+.inner-content i{
+    font-size: 30px;
+}
+.inner-content  input[type="radio"]:checked ~ label  i{
+    color: #FFD700;
+}
+
+.inner-content {
+    display:ruby;
+    direction: rtl;
+    width: 100%;
+}
+.inner-content h3 {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+}
+/* end of stars */

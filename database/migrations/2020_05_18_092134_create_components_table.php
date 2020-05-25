@@ -19,6 +19,7 @@ class CreateComponentsTable extends Migration
             $table->string('slug')->unique();
             $table->text('body');
             $table->text('description', 250)->nullable();
+            $table->text('image');
             $table->integer('user_id')->unsigned();
             $table->boolean('private')->default(0);
             $table->timestamps();

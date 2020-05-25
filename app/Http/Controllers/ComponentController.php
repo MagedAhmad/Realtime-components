@@ -29,9 +29,14 @@ class ComponentController extends Controller
     public function store(Request $request) {
         $this->validate($request, [
             'name' => 'required',
-            'body' => 'required'
+            'body' => 'required',
+            'image' => 'required',
+            'private' => 'required'
         ]);
+        
         $request['slug'] = Str::slug($request->name, '-');
+        \Storage::disk('local')->put($request['slug'], $request->image);
+
         $component = auth()->user()->components()->create($request->all());
 
         return $component;

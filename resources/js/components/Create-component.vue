@@ -7,7 +7,12 @@
                 <input type="checkbox" value="1" v-model="private">
                 <span>Private</span>
             </div>
-            <editor></editor>
+            <div ref="printMe">
+                <div>
+                    <editor></editor>
+                </div>
+            </div>
+
             <button type="submit">Create Component</button>
         </form>
     </div>
@@ -22,12 +27,18 @@
                 name: '',
                 description:'',
                 body: '',
-                private: false
+                private: false,
+                image: null
             }
         },
         methods: {
-            createComponent() {
-                axios.post('/component', {name: this.name,description: this.description, body: this.body, private: this.private })
+            async createComponent() {
+                const el = this.$refs.printMe;
+                const options = {
+                    type: 'dataURL'
+                }
+                this.image = await this.$html2canvas(el, options);
+                axios.post('/component', {name: this.name,description: this.description, body: this.body, private: this.private, image: this.image })
                     .then((response) => {
                         window.location.href = '/component/' + response.data.slug;
                     }).catch((error) => {
