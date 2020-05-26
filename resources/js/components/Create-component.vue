@@ -1,20 +1,37 @@
 <template>
     <div>
-        <form action="#" @submit.prevent="createComponent()">
-            <input type="text" v-model="name">
-            <textarea name="description" cols="30" rows="10" v-model="description"></textarea>
-            <div>
-                <input type="checkbox" value="1" v-model="private">
-                <span>Private</span>
+        <div class="flex flex-col md:flex-row">
+            <!-- left side -->
+            <div class="py-8 pr-4 w-full md:w-1/2 text-gray-300">
+                <form action="#" @submit.prevent="createComponent()">
+                    <div class="flex flex-col">
+                        <label for="">Component name</label>
+                        <input type="text" v-model="name" name="name" class="p-4 text-gray-700 my-2 border border-gray-300 rounded-lg focus:outline-none bg-gray-200  focus:border-gray-400" placeholder="Enter component name">
+                        <label for="">Component Description</label>
+                        <textarea v-model="description" class="text-gray-700 autoexpand tracking-wide py-2 px-4  my-2 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+                id="message" type="text" placeholder="Message..."></textarea>
+                        <div class="flex">
+                            <input type="checkbox" class="mr-2" v-model="private"> Private
+                        </div>
+                    </div>
+                    <button type="submit" class="bg-gray-800 hover:bg-orange-500 hover:text-white border border-orange-500 rounded text-orange-500 p-2 my-2">Submit</button>
+
+                </form>
+
+                
             </div>
-            <div ref="printMe">
-                <div>
-                    <editor></editor>
+            <!-- end of left side -->
+            <!-- right side -->
+            <div class="py-8 w-full md:w-1/2 min-h-full text-gray-300 ">
+                <div  ref="printMe" style="height: 300px" class="bg-blue-100 overflow-hidden rounded-lg relative">
+                    <!-- editor component goes here -->
+                    <div>
+                        <editor></editor>
+                    </div>
                 </div>
             </div>
-
-            <button type="submit">Create Component</button>
-        </form>
+            <!-- end of right side -->
+        </div>
     </div>
 </template>
 <script>

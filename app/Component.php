@@ -18,6 +18,10 @@ class Component extends Model
         return $count;
     }
 
+    public function user() {
+        return $this->belongsTo('App\User');    
+    }
+
     public function UserRating() {
         $rating = Rating::select('points')->where([
             'component_id' => $this->id, 

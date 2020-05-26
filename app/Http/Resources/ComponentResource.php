@@ -17,8 +17,11 @@ class ComponentResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
+            'slug' => $this->slug,
             'body' => $this->body,
-            'description' => $this->description
+            'description' => $this->description,
+            'image' => $this->image,
+            'private' => $this->private
         ];
     }
 }

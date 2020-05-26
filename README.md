@@ -21,25 +21,13 @@ php artisan migrate
 
 ### ROAD MAP
 
-- [x] Components:
-    - [x] Proper component fields .  
-    - [x] Online editor .
-    - [x] Realtime preview for changes.
-    - [x] Store Components.
-    - [x] Retrieve/Edit Components.
-    - [x] Copy/Download code buttons.
-    - [x] Private components.
-- [ ] Build UI (Using tailwindcss).
-- [x] Rating.
-- [ ] Users Profile. `(Working on)`
-    - [x] show profile .
-    - [x] Edit profile .
-    - [ ] Deactivate user .
+- [x] Build UI (Using tailwindcss).
+- [ ] Deactive Users Profile. `(Working on)`
 - [ ] Subscribe to certain user.
 - [ ] Notifications system.
-- [x] Comments with disqus.
 - [ ] Authentication with google/github.
 - [ ] Ad area & Payment with stripe.
+- [ ] Build an Api.
 - Admin-panel
     - [ ] Multi authentication.
     - [ ] General statistics & graphs.
