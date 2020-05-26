@@ -5,7 +5,7 @@
     <div class="bg-white py-4 mx-4 md:mx-12 flex flex-col md:flex-row">
         <!-- left side  -->
         <div class="w-full md:w-1/2">
-            <h1 class="text-gray-800 font-bold py-2 text-2xl">{{ auth()->user()->name}}</h1>
+            <h1 class="text-gray-800 font-bold py-2 text-2xl">{{ $user->name }}</h1>
             <p class="text-gray-800 py-2 text-5xl font-bold">Some cool to say <br>about this user</p>
             <button class="bg-gray-200 my-2 font-semibold p-2 hover:bg-gray-800 hover:text-white rounded mr-2"><i class="fa fa-plus"></i> Follow</button>
             <button class="bg-gray-200 my-2 font-semibold p-2 hover:bg-gray-800 hover:text-white rounded mr-2"><i class="fa fa-github"></i> Github</button>

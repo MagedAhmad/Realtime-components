@@ -14,10 +14,10 @@ class UserProfileTest extends TestCase
     public function test_user_can_visit_a_profile() 
     {
         $this->withoutExceptionHandling();
-        
         $user = factory('App\User')->create();
+
         $this->get('/profile/'. $user->id)
-            ->assertSee($user->name);
+            ->assertSee($user['name']);
     }
 
     public function test_user_can_see_his_components() 
