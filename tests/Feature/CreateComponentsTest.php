@@ -40,20 +40,15 @@ class CreateComponentsTest extends TestCase
     }
 
     public function test_user_can_create_private_component() {
-        $this->withoutExceptionHandling();
+        $this->withoutExceptionHandling
+        ();
         $this->signIn();
-        $component1 = $this->post('/component', [
-            'name' => 'something',
-            'body' => 'another thing',
-            'private' => 1
-        ]);
+        $component = factory('App\Component')->make(['private' => 1]);
+        $component1 = $this->post('/component', $component->toArray());
         $this->get('/component')->assertDontSee($component1['name']);
-        
-        $component2 = $this->post('/component', [
-            'name' => 'post',
-            'body' => 'another body',
-        ]);
-        $this->get('/component')->assertSee($component2['name']);
+        $component = factory('App\Component')->make(['private' => 0]);
+        $component2 = $this->post('/component', $component->toArray());
 
+        $this->get('/component')->assertSee($component2['name']);
     }
 }

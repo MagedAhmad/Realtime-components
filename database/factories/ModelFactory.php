@@ -26,6 +26,8 @@ $factory->define(Component::class, function (Faker $faker) {
         'user_id' => 1,
         'body' => $faker->paragraph,
         'description' => $faker->paragraph,
+        'image' => 'some image',
+        'private' => 0
     ];
 });
 
