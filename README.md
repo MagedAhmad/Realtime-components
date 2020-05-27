@@ -22,6 +22,7 @@ php artisan migrate
 ### ROAD MAP
 
 - [x] Build UI (Using tailwindcss).
+- [ ] Support css frameworks.
 - [ ] Deactive Users Profile. `(Working on)`
 - [ ] Subscribe to certain user.
 - [ ] Notifications system.

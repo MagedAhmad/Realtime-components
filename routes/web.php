@@ -2,16 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', 'ComponentController@index');
 Route::resource('component', 'ComponentController');
 Route::get('component/{slug}/download', 'ComponentController@download');
-Route::post('component/rate', 'RatingController@store');
 
 Route::get('profile/{user}', 'ProfileController@show');
 Route::patch('profile/{user}', 'ProfileController@update');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::post('component/rate', 'RatingController@store');
 
 Auth::routes();
 

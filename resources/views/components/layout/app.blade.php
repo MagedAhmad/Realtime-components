@@ -1,6 +1,6 @@
 @include('components.layout.header')
 
-<div id="app">
+<div>
     @yield('content')
 </div>
 
