@@ -1,6 +1,6 @@
 <template>
     <div>
-        <iframe sandbox :id="id">
+        <iframe sandbox :id="id" class="w-full h-full resize-x" style="min-height:250px;">
         </iframe>
     </div>
 </template>

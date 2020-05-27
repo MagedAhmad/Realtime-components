@@ -14,10 +14,10 @@
             <create-component></create-component>
 
             <!-- preview section -->
-            <div>
+            <div class="flex-1">
                 <div class="md:py-4 w-full min-h-full">
-                    <a title="TailwindCSS Twitter Clone" class="flex flex-col rounded overflow-hidden" href="/component/twitter-clone">
-                        <div style="height: 300px" class="bg-blue-100 overflow-hidden rounded-lg relative">
+                    <a class="flex flex-col rounded overflow-hidden">
+                        <div class="w-full h-full bg-blue-100 overflow-hidden rounded-lg relative">
                             <!-- preview component goes here -->
                             <preview></preview>
                         </div>

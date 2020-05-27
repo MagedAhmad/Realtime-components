@@ -41,8 +41,11 @@
                     <a href="#" class="hover:text-orange-500 block mt-4 lg:inline-block lg:mt-0  mr-4">
                         Examples
                     </a>
-                    <a href="https://github.com/MagedAhmad/Realtime-components" class="hover:text-orange-500 block mt-4 lg:inline-block lg:mt-0 ">
+                    <a href="https://github.com/MagedAhmad/Realtime-components" class="hover:text-orange-500 block mt-4 lg:inline-block lg:mt-0 md:mr-4">
                         Github
+                    </a>
+                    <a href="{{ url('/component/create') }}" class="hover:text-orange-500 block mt-4 lg:inline-block lg:mt-0">
+                        Create Component
                     </a>
                     </div>
                     <div>
