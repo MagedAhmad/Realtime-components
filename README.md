@@ -22,13 +22,13 @@ php artisan migrate
 ### ROAD MAP
 
 - [x] Build UI (Using tailwindcss).
-- [ ] Support css frameworks.
-- [ ] Deactive Users Profile. `(Working on)`
-- [ ] Subscribe to certain user.
+- [ ] Search through components.
+- [ ] Build an Api.
+- [ ] Following.
+- [ ] Deactive Users Profile. 
 - [ ] Notifications system.
 - [ ] Authentication with google/github.
 - [ ] Ad area & Payment with stripe.
-- [ ] Build an Api.
 - Admin-panel
     - [ ] Multi authentication.
     - [ ] General statistics & graphs.
