@@ -3,6 +3,10 @@
 
 A service to share code snippets and components
 
+
+![Realcomponents demo preview](demo/realcomponent.gif)
+
+
 ### ABOUT 
 
 Project is originally built for learning porpuses. it's like <a target="_blank" href="https://codepen.io/">codepen</a>. Used <a target="_blank" href="https://codemirror.net/">CodeMirror</a> to ship the online text editor.

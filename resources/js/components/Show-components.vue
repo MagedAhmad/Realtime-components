@@ -1,6 +1,6 @@
 <template>
     <div class="flex-1 grid grid-column gap-8 py-8">
-        <a v-for="component in data" :key="component.id" class="flex flex-col rounded overflow-hidden" :href="'/component/' + component.slug">
+        <a v-for="component in data" :key="component.id" class="flex flex-col rounded overflow-hidden hover:opacity-75" :href="'/component/' + component.slug">
             <div class="h-48 xl:h-64 bg-blue-100 overflow-hidden rounded-lg relative">
                 <img loading="lazy" class="w-full h-full" :src="component.image">
             </div>
