@@ -6,7 +6,7 @@
 
  
 
-import './bootstrap';
+// import './bootstrap';
 
 
 window.Vue = require('vue');

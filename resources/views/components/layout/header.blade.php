@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{url('/css/dracula.css')}}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="{{url('css/style.css') }}">
 
