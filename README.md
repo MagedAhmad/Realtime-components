@@ -4,7 +4,7 @@
 A service to share code snippets and components
 
 
-![Realcomponents demo preview](demo/realcomponent.gif)
+![Realcomponents demo preview](demo/realtime-components.gif)
 
 
 ### ABOUT 
