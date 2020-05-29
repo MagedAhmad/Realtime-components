@@ -23,10 +23,10 @@
     <!-- sub nav  -->
     <div class="mx-4 md:mx-12">
         <ul class="flex py-4">
-            <li class="text-gray-900 hover:text-orange-500 pr-8 font-semibold">Components<span class="text-gray-700 px-2">3</span></li>
-            <li class="text-gray-900 hover:text-orange-500 pr-8 font-semibold">Followers<span class="text-gray-700 px-2">3</span></li>
-            <li class="text-gray-900 hover:text-orange-500 pr-8 font-semibold">Following<span class="text-gray-700 px-2">3</span></li>
-            <li class="text-gray-900 hover:text-orange-500 pr-8 font-semibold">Likes<span class="text-gray-700 px-2">3</span></li>
+            <li class="text-gray-900 hover:text-orange-500 pr-8 font-semibold">Components<span class="text-gray-700 px-2">{{ count($components)}}</span></li>
+            <li class="text-gray-900 hover:text-orange-500 pr-8 font-semibold">Followers<span class="text-gray-700 px-2">0</span></li>
+            <li class="text-gray-900 hover:text-orange-500 pr-8 font-semibold">Following<span class="text-gray-700 px-2">0</span></li>
+            <li class="text-gray-900 hover:text-orange-500 pr-8 font-semibold">Likes<span class="text-gray-700 px-2">0</span></li>
         </ul>
     </div>
     <hr class="h-px bg-gray-700 border-none">

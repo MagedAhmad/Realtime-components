@@ -21,7 +21,8 @@ class ComponentResource extends JsonResource
             'body' => $this->body,
             'description' => $this->description,
             'image' => $this->image,
-            'private' => $this->private
+            'private' => $this->private,
+            'user' => $this->user
         ];
     }
 }

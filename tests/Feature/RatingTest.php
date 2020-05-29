@@ -38,7 +38,7 @@ class RatingTest extends TestCase
         $response = $this->post('/component/rate', [
             'points' => 4.0,
             'component_id' => $component->id
-        ])->assertRedirect('/login'); 
+        ])->assertRedirect('/register'); 
     }
 
     public function test_user_can_get_his_rating_to_a_given_component() {

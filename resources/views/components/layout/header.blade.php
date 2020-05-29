@@ -44,9 +44,11 @@
                     <a href="https://github.com/MagedAhmad/Realtime-components" class="hover:text-orange-500 block mt-4 lg:inline-block lg:mt-0 md:mr-4">
                         Github
                     </a>
+                    @auth
                     <a href="{{ url('/component/create') }}" class="hover:text-orange-500 block mt-4 lg:inline-block lg:mt-0">
                         Create Component
                     </a>
+                    @endauth
                     </div>
                     <div>
                 </div>

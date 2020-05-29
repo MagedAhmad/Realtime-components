@@ -33,10 +33,10 @@ class CreateComponentsTest extends TestCase
     public function test_guests_cannot_create_components() 
     {
         $this->post('/component')
-            ->assertRedirect('/login');
+            ->assertRedirect('/register');
 
         $this->get('/component/create')
-            ->assertRedirect('/login');
+            ->assertRedirect('/register');
     }
 
     public function test_user_can_create_private_component() {

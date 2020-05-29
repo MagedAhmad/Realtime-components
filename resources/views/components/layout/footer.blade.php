@@ -26,10 +26,10 @@
             </div>
             <div class="flex mt-4 md:m-0">
                 <div class="-mx-4">
-                  <a href="#" class="px-4 text-sm">Components</a>
+                  <a href="/" class="px-4 text-sm">Components</a>
                   <a href="#" class="px-4 text-sm">Examples</a>
-                  <a href="#" class="px-4 text-sm">Github</a>
-                  <a href="#" class="px-4 text-sm">Contact</a>
+                  <a href="https://github.com/MagedAhmad/Realtime-components" class="px-4 text-sm">Github</a>
+                  <a href="https://twitter.com/DevMaged" class="px-4 text-sm">Contact</a>
                   </div>
             </div>
         </div>

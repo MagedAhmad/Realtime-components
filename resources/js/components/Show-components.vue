@@ -6,13 +6,14 @@
             </div>
             <div class="mt-3">
                 <div class="flex">
-                    <div class="rounded-full border-solid border-2 border-orange-500 h-8 w-8 flex-shrink-0 mr-3 mt-1 overflow-hidden shadow-inner relative">
-                        <img loading="lazy" src="https://avatars1.githubusercontent.com/u/42153098?v=4" class="absolute inset-0 z-negative w-full h-full">
+                    <div class=" text-center rounded-full border-solid border-2 border-orange-500 h-8 w-8 flex-shrink-0 mr-3 mt-1 overflow-hidden shadow-inner relative">
+                        <i class="fa fa-user text-white"></i>
+                        <!-- <img loading="lazy" src="https://avatars1.githubusercontent.com/u/42153098?v=4" class="absolute inset-0 z-negative w-full h-full"> -->
                         <!-- <preview :body="component.body"></preview> -->
                     </div>
                     <div class="flex-1 leading-snug w-0">
                         <h4 class="hover:text-orange-500 text-gray-200 whitespace-no-wrap text-secondary font-bold truncate hover:text-primary">{{ component.name }}</h4>
-                        <p class="text-sm text-gray-500">Maged Ahmed</p>
+                        <p class="text-sm text-gray-500">{{ component.user.name }}</p>
                     </div>
                 </div>
             </div>

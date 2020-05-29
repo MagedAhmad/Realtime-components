@@ -14,7 +14,9 @@
                     </div>
                     <div class="py-4">
                         <div>
+                            @can('update', $component)
                             <a href="{{url('/component/'. $component->slug . '/edit')}}" class="bg-gray-800 hover:bg-orange-500 hover:text-white border border-orange-500 rounded text-orange-500 p-2 my-2"><i class="fa fa-edit"></i> Edit</a>
+                            @endcan
                             <a href="{{ url($component->path() .'/download') }}" class="bg-gray-800 hover:bg-orange-500 hover:text-white border border-orange-500 rounded text-orange-500 p-2 my-2"><i class="fa fa-download"></i> Download</a>
                             <copy-button content="{{ $component->body }}"></copy-button>
                         </div>
@@ -78,60 +80,13 @@
 
 
             <!-- similar components -->
-            <div class="w-full">
+            <!-- <div class="w-full">
                 <h1 class="text-gray-200 underline text-xl font-bold mt-12">Related Components</h1>
                 <div class="flex-1 grid grid-column gap-8 py-8">
-                    <a title="TailwindCSS Twitter Clone" class="flex flex-col rounded overflow-hidden" href="/component/twitter-clone">
-                        <div class="h-48 xl:h-64 bg-blue-100 overflow-hidden rounded-lg relative">
-                            <img loading="lazy" class="w-full h-full object-cover" src="/storage/1240/conversions/temp38981-thumb.jpg">
-                        </div>
-                        <div class="mt-3">
-                            <div class="flex">
-                                <div class="rounded-full border-solid border-2 border-orange-500 h-8 w-8 flex-shrink-0 mr-3 mt-1 overflow-hidden shadow-inner relative">
-                                    <img loading="lazy" src="https://avatars1.githubusercontent.com/u/42153098?v=4" class="absolute inset-0 z-negative w-full h-full">
-                                </div>
-                                <div class="flex-1 leading-snug w-0">
-                                    <h4 class="hover:text-orange-500 text-gray-200 whitespace-no-wrap text-secondary font-bold truncate hover:text-primary">Another component</h4>
-                                    <p class="text-sm text-gray-500">Maged Ahmed</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a title="TailwindCSS Twitter Clone" class="flex flex-col rounded overflow-hidden" href="/component/twitter-clone">
-                        <div class="h-48 xl:h-64 bg-blue-100 overflow-hidden rounded-lg relative">
-                            <img loading="lazy" class="w-full h-full object-cover" src="/storage/1240/conversions/temp38981-thumb.jpg">
-                        </div>
-                        <div class="mt-3">
-                            <div class="flex">
-                                <div class="rounded-full border-solid border-2 border-orange-500 h-8 w-8 flex-shrink-0 mr-3 mt-1 overflow-hidden shadow-inner relative">
-                                    <img loading="lazy" src="https://avatars1.githubusercontent.com/u/42153098?v=4" class="absolute inset-0 z-negative w-full h-full">
-                                </div>
-                                <div class="flex-1 leading-snug w-0">
-                                    <h4 class="hover:text-orange-500 text-gray-200 whitespace-no-wrap text-secondary font-bold truncate hover:text-primary">Another component</h4>
-                                    <p class="text-sm text-gray-500">Maged Ahmed</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a title="TailwindCSS Twitter Clone" class="flex flex-col rounded overflow-hidden" href="/component/twitter-clone">
-                        <div class="h-48 xl:h-64 bg-blue-100 overflow-hidden rounded-lg relative">
-                            <img loading="lazy" class="w-full h-full object-cover" src="/storage/1240/conversions/temp38981-thumb.jpg">
-                        </div>
-                        <div class="mt-3">
-                            <div class="flex">
-                                <div class="rounded-full border-solid border-2 border-orange-500 h-8 w-8 flex-shrink-0 mr-3 mt-1 overflow-hidden shadow-inner relative">
-                                    <img loading="lazy" src="https://avatars1.githubusercontent.com/u/42153098?v=4" class="absolute inset-0 z-negative w-full h-full">
-                                </div>
-                                <div class="flex-1 leading-snug w-0">
-                                    <h4 class="hover:text-orange-500 text-gray-200 whitespace-no-wrap text-secondary font-bold truncate hover:text-primary">Another component</h4>
-                                    <p class="text-sm text-gray-500">Maged Ahmed</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    <show-components></show-components>
                     
                 </div>
-            </div>
+            </div> -->
             
             <!-- end of similar components -->
         </div>
