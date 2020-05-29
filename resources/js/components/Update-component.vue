@@ -1,6 +1,7 @@
 <template>
     <div>
         <form action="#"  @submit.prevent="updateComponent()">
+            <input type="hidden" name="_method" value="PATCH">
             <div class="flex flex-col md:flex-row">
                 <!-- left side -->
                 <div class="py-8 pr-4 w-full md:w-1/2 text-gray-300">
