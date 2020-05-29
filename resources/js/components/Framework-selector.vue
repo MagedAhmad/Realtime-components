@@ -17,8 +17,8 @@ export default {
         return {
            isOpen: false,
             frameworks : [ 
-                ['tailwindcss', '<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">'],
-                ['bootstrap', '<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">']
+                ['tailwindcss', '<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"><br>'],
+                ['bootstrap', '<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"><br>']
             ]
         }
     },
