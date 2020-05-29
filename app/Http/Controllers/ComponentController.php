@@ -32,9 +32,14 @@ class ComponentController extends Controller
             'name' => 'required',
             'body' => 'required',
             'image' => 'required',
-            'private' => 'required'
+            'private' => 'required',
+            'framework' => 'nullable'
         ]);
         
+        if(!empty($request->framework)) {
+            $this->getFrame($request->framework);
+        }
+
         $request['slug'] = Str::slug($request->name, '-');
         \Storage::disk('local')->put($request['slug'], $request->image);
 
@@ -66,4 +71,9 @@ class ComponentController extends Controller
         header("Content-Disposition: attachment; filename=" . $filename);
         echo $component->body;
     }
+
+    public function getFrame($framework) {
+        return 'something';
+    }
+
 }

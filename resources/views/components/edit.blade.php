@@ -14,7 +14,7 @@
                 <a title="TailwindCSS Twitter Clone" class="flex flex-col rounded overflow-hidden" href="/component/twitter-clone">
                     <div style="height: 300px" class="bg-blue-100 overflow-hidden rounded-lg relative">
                         <!-- preview component goes here -->
-                        <preview body="{{ $component->body }}"></preview>
+                        <preview body="{{ $component->body }}" style="{{ $component->framework}}"></preview>
 
                     </div>
                 </a>

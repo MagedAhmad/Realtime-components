@@ -24,6 +24,7 @@ $factory->define(Component::class, function (Faker $faker) {
         'name' => $name,
         'slug' => Str::slug($name, '-'),
         'user_id' => 1,
+        'framework' => 'anything',
         'body' => $faker->paragraph,
         'description' => $faker->paragraph,
         'image' => 'some image',

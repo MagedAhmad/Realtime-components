@@ -8,12 +8,13 @@
 
     export default {
         props: [
-            'body'
+            'body',
         ],
         data() {
             return {
                data: '',
                editor: '',
+               framework: '',
             }
         },
         mounted() {
@@ -28,11 +29,17 @@
                 highlightDifferences: true
             });
         },
-         methods: {
+        created() {
+            EventBus.$on('framework', (data) => {
+                this.framework = data;
+            })
+        },
+        methods: {
             changed() {
-                this.data = this.editor.getValue();
-                EventBus.$emit('changed', this.data);
+                this.data = this.editor.getValue()
+                EventBus.$emit('changed', this.data)
             }
         }
+        
     }
 </script>

@@ -14,7 +14,8 @@
         data() {
             return {
                 iframe : '',
-                id : this.uid
+                id : this.uid,
+                framework: ''
             }
         },
         mounted() {
@@ -26,7 +27,11 @@
         },
         created() {
             EventBus.$on('changed', (data) => {
+                data = this.framework + data
                 this.iframe.src = "data:text/html;charset=utf-8," + encodeURI(data);
+            })
+            EventBus.$on('framework', (data) => {
+                this.framework = data
             })
         },
     }

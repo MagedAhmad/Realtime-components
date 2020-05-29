@@ -7,6 +7,8 @@
                     <div class="flex flex-col">
                         <label for="">Component name</label>
                         <input type="text" v-model="name" name="name" class="p-4 text-gray-700 my-2 border border-gray-300 rounded-lg focus:outline-none bg-gray-200  focus:border-gray-400" placeholder="Enter component name">
+                        <label for="">CSS Framework</label>
+                        <framework-selector></framework-selector>
                         <label for="">Component Description</label>
                         <textarea v-model="description" class="text-gray-700 autoexpand tracking-wide py-2 px-4  my-2 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
                 id="message" type="text" placeholder="Message..."></textarea>
@@ -26,7 +28,7 @@
                 <div  ref="printMe" style="height: 300px" class="bg-blue-100 overflow-hidden rounded-lg relative">
                     <!-- editor component goes here -->
                     <div>
-                        <editor></editor>
+                        <editor :framework="framework"></editor>
                     </div>
                 </div>
             </div>
@@ -45,7 +47,8 @@
                 description:'',
                 body: '',
                 private: false,
-                image: null
+                image: null,
+                framework: ''
             }
         },
         methods: {
@@ -55,7 +58,7 @@
                     type: 'dataURL'
                 }
                 this.image = await this.$html2canvas(el, options);
-                axios.post('/component', {name: this.name,description: this.description, body: this.body, private: this.private, image: this.image })
+                axios.post('/component', {name: this.name,description: this.description, body: this.body, private: this.private, image: this.image, framework: this.framework })
                     .then((response) => {
                         window.location.href = '/component/' + response.data.slug;
                     }).catch((error) => {
@@ -63,11 +66,15 @@
                     });
                 EventBus.$off()
             },
-            
         },
         created() {
             EventBus.$on('changed', (data) => {
-                this.body = data;
+                this.body = this.framework + data;
+            })
+
+            EventBus.$on('framework', (data) => {
+                this.framework = data;
+                this.body = this.framework + this.body
             })
         },
     }

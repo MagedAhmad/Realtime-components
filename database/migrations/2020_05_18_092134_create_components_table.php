@@ -20,6 +20,7 @@ class CreateComponentsTable extends Migration
             $table->text('body');
             $table->text('description', 250)->nullable();
             $table->text('image');
+            $table->text('framework')->nullable();
             $table->integer('user_id')->unsigned();
             $table->boolean('private')->default(0);
             $table->timestamps();
