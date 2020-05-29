@@ -33,6 +33,8 @@
 
 
 <script>    
+import axios from 'axios'
+
 import { EventBus } from '../event-bus.js';
 
 export default {
