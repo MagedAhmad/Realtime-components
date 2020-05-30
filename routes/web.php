@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::put('component/{slug}', 'ComponentController@update');
 Route::get('/', 'ComponentController@index');
 Route::resource('component', 'ComponentController');
 Route::get('component/{slug}/download', 'ComponentController@download');
