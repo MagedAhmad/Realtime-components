@@ -18,27 +18,10 @@ Technologies: Laravel, Vue.
 ```
 composer install
 cp .env.example .env
+php artisan key:generate
 npm install
 php artisan migrate
 ```
-
-
-### ROAD MAP
-
-- [x] Build UI (Using tailwindcss).
-- [ ] Search through components.
-- [ ] Build an Api.
-- [ ] Following.
-- [ ] Deactive Users Profile. 
-- [ ] Notifications system.
-- [ ] Authentication with google/github.
-- [ ] Ad area & Payment with stripe.
-- Admin-panel
-    - [ ] Multi authentication.
-    - [ ] General statistics & graphs.
-
-More features to come ... 
-
 ### Contribution 
 
 If you want to contribute <b>make sure</b> that 

@@ -28,7 +28,7 @@
 
         <!-- components gallery -->
         <div>
-            <show-components :data="{{ json_encode($components) }}"></show-components>
+            <show-components></show-components>
         </div>
         <!-- End of component gallery -->
 
