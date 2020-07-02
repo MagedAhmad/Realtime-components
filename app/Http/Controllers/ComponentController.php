@@ -15,8 +15,7 @@ class ComponentController extends Controller
 
 
     public function index() {
-        $components = ComponentResource::collection(Component::with('user')->where('private', 0)->get());
-        return view('components.index', compact('components'));
+        return view('components.index');
     }
 
     public function show(Component $component) {
