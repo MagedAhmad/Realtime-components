@@ -38,9 +38,9 @@
                     <a href="{{url('/component')}}" class="hover:text-orange-500 block mt-4 lg:inline-block lg:mt-0  mr-4">
                         Components
                     </a>
-                    <a href="#" class="hover:text-orange-500 block mt-4 lg:inline-block lg:mt-0  mr-4">
+                    <!-- <a href="#" class="hover:text-orange-500 block mt-4 lg:inline-block lg:mt-0  mr-4">
                         Examples
-                    </a>
+                    </a> -->
                     <a href="https://github.com/MagedAhmad/Realtime-components" class="hover:text-orange-500 block mt-4 lg:inline-block lg:mt-0 md:mr-4">
                         Github
                     </a>

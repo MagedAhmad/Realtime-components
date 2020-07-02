@@ -60,7 +60,17 @@
                 this.image = await this.$html2canvas(el, options);
                 axios.post('/component', {name: this.name,description: this.description, body: this.body, private: this.private, image: this.image, framework: this.framework })
                     .then((response) => {
-                        window.location.href = '/component/' + response.data.slug;
+                        Swal.fire({
+                            title: 'Yaaaay!',
+                            text: 'Your snippet is live and ready to be shared!',
+                            icon: 'success',
+                            showCancelButton: false,
+                            confirmButtonText: 'Snippet page',
+                        }).then((result) => {
+                        if (result.value) {
+                            window.location.href = '/component/' + response.data.slug;
+                        }
+                        })
                     }).catch((error) => {
                         console.log(error)
                     });

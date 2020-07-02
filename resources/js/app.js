@@ -21,6 +21,10 @@ import "codemirror/mode/htmlmixed/htmlmixed.js"
 import VueClipboard from 'vue-clipboard2'
 import UniqueId from 'vue-unique-id';
 import VueHtml2Canvas from 'vue-html2canvas';
+import Swal from 'sweetalert2'
+
+window.Swal = Swal
+
 require('babel-polyfill')
 
 Vue.use(VueHtml2Canvas);
