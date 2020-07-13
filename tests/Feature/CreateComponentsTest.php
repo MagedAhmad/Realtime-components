@@ -48,7 +48,7 @@ class CreateComponentsTest extends TestCase
         $this->get('/component')->assertDontSee($component1['name']);
         $component = factory('App\Component')->make(['private' => 0]);
         $component2 = $this->post('/component', $component->toArray());
-
+        
         $this->get('/component')->assertSee($component2['name']);
     }
 }

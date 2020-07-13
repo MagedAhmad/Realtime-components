@@ -12,10 +12,11 @@
                             <textarea v-model="description" class="autoexpand text-gray-700 tracking-wide py-2 px-4  my-2 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
                     id="message" type="text" placeholder="Message..."></textarea>
                             <div class="flex">
-                                <input type="checkbox" class="mr-2"> Private
+                                <input type="checkbox" class="mr-2" v-model="component.private"> Private
                             </div>
                         </div>
                         <button type="submit" class="bg-gray-800 hover:bg-orange-500 hover:text-white border border-orange-500 rounded text-orange-500 p-2 my-2">Submit</button>
+                        <button @click.prevent="returnToComponent">Return</button>
                 </div>
                 <!-- end of left side -->
                 <!-- right side -->
@@ -46,20 +47,27 @@ export default {
         return {
             name: this.component.name,
             description : this.component.description,
-            body: this.component.body
+            body: this.component.body,
         }
     },
     methods: {
         updateComponent() {
-            axios.patch('/component/' + this.component.slug, {
+            axios.post('/component/' + this.component.slug, {
+                _method: 'patch',
                 name : this.name,
                 description : this.description,
                 body : this.body
             }).then((response) => {
-                window.location.href = '/component/' + response.data.slug;
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Component updated'
+                })
             }).catch((error) => {
                 console.log(error)
             });
+        },
+        returnToComponent() {
+            window.location.href = '/component/' + this.component.slug;
         }
     }, 
     created() {
