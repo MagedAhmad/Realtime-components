@@ -1,9 +1,10 @@
 <div id="disqus_thread"></div>
 <script>
 
-<?php 
+<?php
 
-$currentUrl = Request::url(); //gets the current url of the post
+
+$currentUrl = \Request::url(); //gets the current url of the post
 $pageIndentifier = 'route/'. implode("/", Request::segments()); //page indentifier
 
 ?>
