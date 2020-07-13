@@ -30,7 +30,7 @@
             </div>
 
             <div class="flex items-center flex-shrink-0 text-white mr-6 text-gray-900">
-                <span class="logo font-semibold text-xl tracking-tight">ONLINE FLY</span>
+                <a href="{{url('/')}}" class="logo font-semibold text-xl tracking-tight">Realtime Components</a>
             </div>
             
             <div id="navbar" class="w-full hidden block flex-grow lg:flex lg:items-center lg:w-auto">
@@ -41,14 +41,12 @@
                     <!-- <a href="#" class="hover:text-orange-500 block mt-4 lg:inline-block lg:mt-0  mr-4">
                         Examples
                     </a> -->
-                    <a href="https://github.com/MagedAhmad/Realtime-components" class="hover:text-orange-500 block mt-4 lg:inline-block lg:mt-0 md:mr-4">
+                    <!-- <a href="https://github.com/MagedAhmad/Realtime-components" class="hover:text-orange-500 block mt-4 lg:inline-block lg:mt-0 md:mr-4">
                         Github
-                    </a>
-                    @auth
+                    </a> -->
                     <a href="{{ url('/component/create') }}" class="hover:text-orange-500 block mt-4 lg:inline-block lg:mt-0">
                         Create Component
                     </a>
-                    @endauth
                     </div>
                     <div>
                 </div>
