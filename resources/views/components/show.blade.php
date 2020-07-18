@@ -9,7 +9,7 @@
                 <div class="pt-8 w-full md:w-1/3 text-gray-300 flex-col justify-between">
                     <div class="flex-1">
                         <h2 class="font-bold text-lg">{{ $component->name }}</h2>
-                        <p class="text-gray-400"><span class="text-gray-600">by </span>Maged Ahmad</p>
+                        <p class="text-gray-400"><span class="text-gray-600">by </span>{{ $component->user->name }}</p>
                         <p class="text-gray-200 font-lg my-2">{{ $component->description }}</p>
                     </div>
                     <div class="py-4">
@@ -23,7 +23,7 @@
                         <div class="mt-4 hidden md:block">
                             <h2 class="text-lg py-2">Rating</h2>
                             <div class="main-container">
-                                <div class="inner-content">
+                                <div class="inner-content" style="direction:ltr">
                                     <input type="radio" name="starRating" id="star1" class="hidden">
                                     <label for="star1"><i class="fa fa-star-o text-gray-200"></i></label>
                                     <input type="radio" name="starRating" id="star2" class="hidden">

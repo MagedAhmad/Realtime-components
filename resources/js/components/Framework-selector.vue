@@ -1,13 +1,14 @@
 <template>
     <div class="relative my-2">
-        <select class="bg-gray-200 text-black w-full p-2">
-            <option v-on:click="chooseFrame('')">Choose CSS framework</option>
-            <option v-on:click="chooseFrame('tailwindcss')">TailwindCSS</option>
-            <option v-on:click="chooseFrame('bootstrap')">Bootstrap</option>
+        <select class="bg-gray-200 text-black w-full p-2" v-on:change="chooseFrame">
+            <option
+                v-for="f in frameworks"
+                :value="f.value">
+                {{f.name }}
+            </option>
         </select>
     </div>
 </template>
-
 
 <script>
 import { EventBus } from '../event-bus.js'
@@ -17,8 +18,18 @@ export default {
         return {
            isOpen: false,
             frameworks : [ 
-                ['tailwindcss', '<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">\n'],
-                ['bootstrap', '<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">\n']
+                {
+                    "name": "Choose CSS framework",
+                    "value": ''
+                },
+                {
+                    "name": "TailwindCss",
+                    "value": '<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">\n'
+                },
+                {
+                    "name" : "Bootstrap",
+                    "value": '<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">\n'
+                }
             ]
         }
     },
@@ -34,13 +45,9 @@ export default {
         })
     },
     methods: {
-        chooseFrame(data) {
+        chooseFrame(event) {
             this.isOpen = false
-            this.frameworks.forEach(element => {
-                if(element[0] == data)
-                    data = element[1]
-            });
-            EventBus.$emit('framework', data)
+            EventBus.$emit('framework', event.target.value)
         },
     }
 }

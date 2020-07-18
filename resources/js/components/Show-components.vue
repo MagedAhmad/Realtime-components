@@ -18,6 +18,7 @@
                 </div>
             </div>
         </a>
+        
     </div>
 
 </template>
@@ -35,12 +36,18 @@ export default {
         }
     },
     mounted() {
-        axios.get('/api/components')
+        if(this.data != null) {
+            this.components = this.data;
+        }else if(window.location.pathname == '/component'){
+            axios.get('/api/components')
             .then((response) => {
                 this.components = response.data
             }).catch((error) => {
                 console.log(error)
             });
+        }
+    
+        
     }
 }
 </script>

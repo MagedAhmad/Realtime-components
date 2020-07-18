@@ -20,11 +20,10 @@ class ProfileController extends Controller
     public function update(User $user, Request $request) 
     {
         $this->authorize('update', $user);
-
         $user->update(request()->validate([
             'name' => 'required',
             'email' => 'required',
-        ]));  
+        ]));
 
         return $user;
     }

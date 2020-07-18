@@ -12,7 +12,7 @@ class ComponentController extends Controller
     public function index()
     {
         $components = ComponentResource::collection(
-            Component::with('user')->where('private', 0)->get()->take(6)
+            Component::with('user')->where('private', 0)->latest()->get()
         );
 
         return json_encode($components);

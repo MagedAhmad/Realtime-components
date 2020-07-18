@@ -41,7 +41,7 @@ require('babel-polyfill')
 
 Vue.use(VueHtml2Canvas);
 Vue.use(UniqueId);
-
+Vue.use(require('vue-resource'));
 Vue.use(VueClipboard)
 
 /**
@@ -62,7 +62,7 @@ Vue.component('update-component', require('./components/Update-component.vue').d
 Vue.component('copy-button', require('./components/Copy-button.vue').default);
 Vue.component('show-components', require('./components/Show-components.vue').default);
 Vue.component('framework-selector', require('./components/Framework-selector.vue').default);
-
+Vue.component('pagination', require('laravel-vue-pagination'));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

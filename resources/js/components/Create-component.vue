@@ -11,16 +11,13 @@
                         <framework-selector></framework-selector>
                         <label for="">Component Description</label>
                         <textarea v-model="description" class="text-gray-700 autoexpand tracking-wide py-2 px-4  my-2 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
-                id="message" type="text" placeholder="Message..."></textarea>
+                            id="message" type="text" placeholder="Message..."></textarea>
                         <div class="flex">
                             <input type="checkbox" class="mr-2" v-model="private"> Private
                         </div>
                     </div>
                     <button type="submit" class="bg-gray-800 hover:bg-orange-500 hover:text-white border border-orange-500 rounded text-orange-500 p-2 my-2">Submit</button>
-
                 </form>
-
-                
             </div>
             <!-- end of left side -->
             <!-- right side -->
