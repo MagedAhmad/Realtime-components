@@ -30,7 +30,11 @@ class ComponentPolicy
      */
     public function view(User $user, Component $component)
     {
-        //
+        if($component->private && $user->id !== $component->user->id) {
+            return false;
+        }
+
+        return true;
     }
 
     /**
