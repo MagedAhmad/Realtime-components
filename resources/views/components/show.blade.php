@@ -44,12 +44,10 @@
 
                 <!-- right side -->
                 <div class="md:py-4 w-full md:w-2/3 min-h-full">
-                    <a title="TailwindCSS Twitter Clone" class="flex flex-col rounded overflow-hidden" href="/component/twitter-clone">
-                        <div style="height: 300px" class="bg-blue-100 overflow-hidden rounded-lg relative">
-                            <!-- preview component goes here -->
-                            <preview body="{{ $component->body }}"></preview>
-                        </div>
-                    </a>
+                    <div style="height: 300px" class="bg-blue-100 overflow-hidden rounded-lg relative">
+                        <!-- preview component goes here -->
+                        <preview body="{{ $component->body }}"></preview>
+                    </div>
                 </div>
                 <!-- End of right side -->
                 <div class="mt-4 md:hidden">

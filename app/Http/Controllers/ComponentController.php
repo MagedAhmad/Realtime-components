@@ -19,8 +19,6 @@ class ComponentController extends Controller
     }
 
     public function show(Component $component) {
-        $this->authorize('view', $component);
-
         return view('components.show', compact('component'));
     }
 

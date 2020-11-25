@@ -32,6 +32,7 @@
     "v-clipboard": "^2.2.3",
     "vue-clipboard2": "^0.3.1",
     "vue-html2canvas": "0.0.4",
+    "vue-loading-overlay": "^3.4.2",
     "vue-resource": "^1.5.1",
     "vue-unique-id": "^3.1.0"
   }

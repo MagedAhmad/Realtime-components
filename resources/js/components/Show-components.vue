@@ -25,6 +25,12 @@
 
 <script>
 import axios from 'axios'
+// Import component
+import Loading from 'vue-loading-overlay';
+// Import stylesheet
+import 'vue-loading-overlay/dist/vue-loading.css';
+// Init plugin
+Vue.use(Loading);
 
 export default {
     props: [
@@ -32,17 +38,32 @@ export default {
     ],
     data() {
         return {
-            components: {}
+            components: {},
+            fullPage: true,
         }
+    },
+    components: {
+        Loading
     },
     mounted() {
         if(this.data != null) {
             this.components = this.data;
-        }else if(window.location.pathname == '/component'){
+        }else {
+            let loader = this.$loading.show({
+                // Optional parameters
+                container: this.fullPage ? null : this.$refs.formContainer,
+                canCancel: false,
+                onCancel: this.onCancel,
+                color: "#2d3748",
+                loader: "bars"
+            });
+
             axios.get('/api/components')
             .then((response) => {
                 this.components = response.data
+                loader.hide()
             }).catch((error) => {
+                loader.hide()
                 console.log(error)
             });
         }
