@@ -23,11 +23,15 @@ export default {
                     "value": ''
                 },
                 {
-                    "name": "TailwindCss",
+                    "name": "TailwindCSS Version 1",
                     "value": '<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">\n'
                 },
                 {
-                    "name" : "Bootstrap",
+                    "name": "TailwindCSS Version 2",
+                    "value": '<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">'
+                },
+                {
+                    "name" : "Bootstrap Version 4.5.0",
                     "value": '<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">\n'
                 }
             ]
